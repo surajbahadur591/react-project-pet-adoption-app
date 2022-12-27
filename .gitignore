@@ -4,6 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
+dist/
+.env
+.DS_Store
+coverage/
+.vscode/
 
 # testing
 /coverage
