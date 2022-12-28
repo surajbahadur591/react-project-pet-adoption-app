@@ -1,24 +1,60 @@
 import "./App.css";
 import { React } from "react";
-import Pet from "./Pet";
 import SearchParams from "./SearchParams";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Details from "./Details";
+import img from './shared/logo-pet.jpg'
+
+// query is like a cache 
+const queryClient = new QueryClient({
+  defaultOptions : {
+    queries : {
+      staleTime : Infinity,
+      cacheTime : Infinity,
+    }
+  }
+})
 
 function App() {
+  
   return (
-    <div className="header-fix">
-      <img src="./images/logo-pet.jpg" height="50px" alt="logo"></img>
-      <h2 className="h2-fix">Find Your <span className="dream-color">Dream</span>  Pet Here <img src="./images/cat.jpg" width="30px" alt="" /></h2> 
+    <div>
       
-      <div className="content-fix">
+      
+      <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
 
-      <SearchParams></SearchParams>
-        {/* <Pet image='' name='Amber' age='4 years' weight='7 kg' location='Mumbai' ></Pet>
+      
+      <Link to='/' ><div className="header-fix">
+        <img src={img} height="50px" alt="logo"></img>
+        <h2 className="h2-fix">
+          Find Your <span className="dream-color">Dream</span> Pet Here
+        </h2>
+      </div></Link>
+
+      <Routes>
+        
+        <Route path="/details/:id" element={<Details/>}>AA</Route>
+        <Route path="/" element={<SearchParams/>}></Route>
+      </Routes>
+      
+      </QueryClientProvider>
+      </BrowserRouter>
+      
+      {/* <img src="./images/cat.jpg" width="30px" alt="" /> */}
+
+      {/* <div className="header-fix">
+        <img src="./images/logo-pet.jpg" height="50px" alt="logo"></img>
+        <h2 className="h2-fix">
+          Find Your <span className="dream-color">Dream</span> Pet Here{" "}
+        </h2>
         
 
-        <Pet image='' name='Scooby' animal='Dog' age='10 years' weight='16 kg' location='Hyderabad' ></Pet>
-
-        <Pet image='' name='Tommy' animal='Dog' age='6 years' weight='6 kg' location='Delhi' ></Pet> */}
-      </div>
+        <div className="content-fix">
+          <SearchParams></SearchParams>
+        </div>
+      </div> */}
     </div>
   );
 }
