@@ -96,7 +96,7 @@
   
   .details {
     
-    width: 1100px;
+    width: 900px;
     margin: 0 auto;
     padding: 15px;
     margin-bottom: 25px;
@@ -108,8 +108,8 @@
   .details-font{
     color: white;
     font-size: 20px;
-    padding: 0px ;
-    margin: 0 auto;
+    padding: 0px 0px 0px 0px ;
+    margin: 0px 0px 0px 0px;
   }
   
   .pet {
@@ -206,20 +206,20 @@
   
   .details h2 {
     text-align: center;
-    margin: 5px 0px 20px 0px;
+    margin: 0px 0px 0px 10px;
   }
   
   .carousel {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 400px;
+    height: 350px;
     margin-top: 8px;
   }
   
   .carousel > img {
     max-width: 45%;
-    max-height: 400px;
+    max-height: 250px;
   }
   
   .carousel-smaller {
@@ -262,9 +262,9 @@
   #modal a,
   .details button {
     background-color: #F7B803;
-    padding: 10px 35px;
+    padding: 12px 36px;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     border: none;
     border-radius: 12px;
     display: block;
@@ -278,6 +278,9 @@
     text-decoration: none;
   }
   
+  .searchbutton-fix{
+    margin-top: 10px;
+  }
   .search-params button:hover {
     background-color: black;
   }

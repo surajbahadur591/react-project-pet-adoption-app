@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query';
 import fetchPet from './fetchPet';
 import location from './shared/location.svg'
+import Carousel from './Carousel';
 
 const Details = () => {
 const {id} = useParams();
@@ -32,6 +33,7 @@ if (results.isLoading) {
 
   return (
     <div className='details'>
+      <Carousel images={pet.images}/>
       <div>
         <h2 className='details-font'>{pet.name}</h2>
         <h2 className='details-font' > <img src={location} height='20px' alt="" /> {pet.city}, {pet.state} </h2>
@@ -39,8 +41,8 @@ if (results.isLoading) {
         <h2 className='details-font'>Sex - {SEX}</h2>
         <h2 className='details-font' >Age - {pet.name.length}</h2>
         
-        <img src={pet.images[0]} alt="" width="250px" />
-        <button className='searchbutton-fix' >Adopt {pet.name}</button>
+        {/* <img src={pet.images[0]} alt="" width="250px" /> */}
+        <button className='searchbutton-fix' > <b> Adopt {pet.name}!!</b></button>
         
         <h4>{pet.description}</h4>
       </div>
