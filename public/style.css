@@ -95,13 +95,21 @@
   }
   
   .details {
+    
     width: 1100px;
     margin: 0 auto;
     padding: 15px;
     margin-bottom: 25px;
-    border-radius: 6px;
-    background: #faeff0;
+    border-radius: 40px;
+    background: #62ACEF;
     box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
+  }
+  
+  .details-font{
+    color: white;
+    font-size: 20px;
+    padding: 0px ;
+    margin: 0 auto;
   }
   
   .pet {
