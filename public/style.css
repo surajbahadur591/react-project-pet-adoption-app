@@ -5,19 +5,12 @@
   
   body {
     background-color: #FFFFFF;
-    /* background-image: url(http://pets-images.dev-apis.com/pets/wallpaperB.jpg); */
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
-  /* .header-fix {
-    background-color: black;
-    
-  } */
+ 
   .pet-card{
-    /* background-image: url('./images/cute-img.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: color; */
+    
     background-color: #FFD68F ;
     border-radius: 60px;
     padding: 10px;
@@ -38,11 +31,7 @@
     text-decoration: none;
   }
   
-  /* .form-fix{
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-  } */
+ 
   .content-fix {
     /* background-color: #99D5FF; */
     

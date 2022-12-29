@@ -13,7 +13,8 @@ const SearchParams = () => {
   }, []);
 
   async function requestPets() {
-    const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}`
+    const res = await fetch(
+      `https://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}`
     );
 
     const json = await res.json();
@@ -21,46 +22,43 @@ const SearchParams = () => {
   }
 
   return (
-    <div  className="content-fix">
-
-    
-
-    <div className="search-params">
-      <form
-        className="form-fix"
-        onSubmit={(e) => {
-          e.preventDefault();
-          requestPets();
-        }}
-      >
-        <input
-          onChange={(e) => {
-            setLocation(e.target.value);
-          }}
-          id="location"
-          value={location}
-          placeholder="Location Ex : Canada"
-        />
-
-        <select
-          name=""
-          id="animal"
-          value={animal}
-          onChange={(e) => {
-            setAnimal(e.target.value);
+    <div className="content-fix">
+      <div className="search-params">
+        <form
+          className="form-fix"
+          onSubmit={(e) => {
+            e.preventDefault();
+            requestPets();
           }}
         >
-          <option id=""> select your pet </option>
-          {ANIMALS.map((animal) => {
-            return <option key={animal}>{animal}</option>;
-          })}
-        </select>
+          <input
+            onChange={(e) => {
+              setLocation(e.target.value);
+            }}
+            id="location"
+            value={location}
+            placeholder="Location Ex : Canada"
+          />
 
-        <button className="searchbutton-fix">Search</button>
-      </form>
+          <select
+            name=""
+            id="animal"
+            value={animal}
+            onChange={(e) => {
+              setAnimal(e.target.value);
+            }}
+          >
+            <option id=""> select your pet </option>
+            {ANIMALS.map((animal) => {
+              return <option key={animal}>{animal}</option>;
+            })}
+          </select>
 
-      <Result pets={pets} />
-    </div>
+          <button className="searchbutton-fix">Search</button>
+        </form>
+
+        <Result pets={pets} />
+      </div>
     </div>
   );
 };
