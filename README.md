@@ -1,7 +1,7 @@
-# MERN stack crud-app client
+# React - Pet Adoption App
 
-CRUP App using MERN Stack 
-#### Feel free to have a look at App [here..](https://mern-stack-crud-app.onrender.com/).
+I have created app as a side project 
+#### Feel free to have a look at App [here..]https://react-project-pet-adoption.netlify.app/).
 ## Landing Page:
 ![landing-page](https://user-images.githubusercontent.com/36602276/210482097-1f1ac969-c7b6-4890-b149-0d1c39c93588.png)
 
